@@ -1,0 +1,58 @@
+/** @jsxImportSource theme-ui */
+// import { jsx } from "theme-ui"
+
+import { ParallaxLayer } from "@react-spring/parallax"
+
+type DividerProps = {
+  speed: number
+  offset: number
+  children?: React.ReactNode
+  bg?: string
+  fill?: string
+  clipPath?: string
+  className?: string
+  factor?: number
+}
+
+export default function Divider({
+  speed,
+  offset,
+  factor = 1,
+  bg = ``,
+  fill = ``,
+  clipPath = ``,
+  children = null,
+  className = ``,
+}: DividerProps
+) {
+  return (
+    <ParallaxLayer
+    sx={{
+      position: `absolute`,
+      width: `full`,
+      height: `full`,
+      background: bg,
+      backgroundColor: bg,
+      "#contact-wave": {
+        color: fill,
+        fill: `currentColor`,
+      },
+      clipPath,
+    }}
+    // style={{
+    //   position: `absolute`,
+    //   width: `full`,
+    //   height: `full`,
+    //   background: bg,
+    //   backgroundColor: bg,
+    //   clipPath,
+    // }}
+    speed={speed}
+    offset={offset}
+    factor={factor}
+    className={className}>
+ {children}
+    </ParallaxLayer>
+  )
+}
+
