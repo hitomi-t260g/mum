@@ -1,32 +1,47 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { get } from "theme-ui"
+import { MDXProvider } from "@mdx-js/react"
+import { Global } from "@emotion/react"
+import MdxComponents from "./mdx-components"
 
-type Props = {
-  children?: ReactNode
-  title?: string
-}
+type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{' '}
-        <Link href="/users">Users List</Link> |{' '}
-        <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span></span>
-    </footer>
-  </div>
+const Layout = ({ children, className = `` }: LayoutProps) => (
+  <>
+    <Global
+      styles={(t) => ({
+        "*": {
+          boxSizing: `inherit`,
+          "&:before": {
+            boxSizing: `inherit`,
+          },
+          "&:after": {
+            boxSizing: `inherit`,
+          },
+        },
+        html: {
+          fontSize: `18px`, //今は見出しfontSizeとsvgサイズがここできまっている
+          WebkitTextSizeAdjust: `100%`,
+        },
+        img: {
+          borderStyle: `none`,
+        },
+        pre: {
+          fontFamily: `monospace`,
+          fontSize: `1em`,
+        },
+        "[hidden]": {
+          display: `none`,
+        },
+        "::selection": {
+          backgroundColor: get(t, `colors.primary`),
+          color: get(t, `colors.background`),
+        },
+      })}
+    />
+    <MDXProvider components={MdxComponents}>
+      <main className={className} >{children}</main>
+    </MDXProvider>
+  </>
 )
 
 export default Layout

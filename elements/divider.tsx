@@ -14,7 +14,7 @@ type DividerProps = {
   factor?: number
 }
 
-export default function Divider({
+const Divider = ({
   speed,
   offset,
   factor = 1,
@@ -23,10 +23,8 @@ export default function Divider({
   clipPath = ``,
   children = null,
   className = ``,
-}: DividerProps
-) {
-  return (
-    <ParallaxLayer
+}: DividerProps) => (
+  <ParallaxLayer
     sx={{
       position: `absolute`,
       width: `full`,
@@ -39,20 +37,13 @@ export default function Divider({
       },
       clipPath,
     }}
-    // style={{
-    //   position: `absolute`,
-    //   width: `full`,
-    //   height: `full`,
-    //   background: bg,
-    //   backgroundColor: bg,
-    //   clipPath,
-    // }}
     speed={speed}
     offset={offset}
     factor={factor}
-    className={className}>
- {children}
-    </ParallaxLayer>
-  )
-}
+    className={className}
+  >
+    {children}
+  </ParallaxLayer>
+)
 
+export default Divider

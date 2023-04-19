@@ -1,5 +1,6 @@
 import { merge, ThemeUIStyleObject } from "theme-ui"
 import tailwind from "@theme-ui/preset-tailwind"
+// import{borderWidths, breakpoints, baseColors ,colors, fonts,fontSizes} from "./themeBase"
 
 declare module "theme-ui" {
   interface Theme {
@@ -12,20 +13,31 @@ const theme = merge(tailwind, {
   config: {
     initialColorModeName: `dark`,
   },
+  // fontSizes: [`0.875rem`, `1rem`, `1.25rem`, `1.5rem`, `1.875rem`, `2.25rem`, `3rem`, `4rem`, `4.5rem`], //gatsby-plugin-theme-uiで指定しているフォントを足した
+  fontSizes: {
+    _1xs: `1rem`, //1
+    s: `1.25rem`, //2
+    ms: `1.5rem`, //3
+    m: `1.875rem`, //4
+    ml: `2.25rem`, //5
+    l: `3rem`, //6
+    xl: `4rem`, //7
+    xxl: `4.5rem` //8
+  },
   colors: {
-    primary: tailwind.colors.orange[4],
+    primary: tailwind.colors.orange[3],
     secondary: tailwind.colors.indigo[6],
     text: tailwind.colors.gray[3],
     heading: tailwind.colors.white,
     background: `#141821`,
     divider: tailwind.colors.gray[8],
-    textMuted: tailwind.colors.gray[5],
+    textMuted: tailwind.colors.gray[4],
     icon_brightest: tailwind.colors.white,
-    icon_darker: tailwind.colors.gray[7],
-    icon_darkest: tailwind.colors.gray[8],
+    icon_darker: tailwind.colors.gray[6],
+    icon_darkest: tailwind.colors.gray[7],
     icon_red: tailwind.colors.red[6],
-    icon_blue: tailwind.colors.blue[6],
-    icon_orange: tailwind.colors.orange[5],
+    icon_blue: tailwind.colors.blue[5],
+    icon_orange: tailwind.colors.orange[4],
     icon_yellow: tailwind.colors.yellow[5],
     icon_pink: tailwind.colors.pink[5],
     icon_purple: tailwind.colors.purple[6],
@@ -66,23 +78,23 @@ const theme = merge(tailwind, {
       },
     },
     p: {
-      fontSize: [1, 2],
+      fontSize: ['xs', 's'],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
       color: `text`,
     },
-    blockquote: {
+  quote: {
       marginLeft: 0,
       p: {
-        fontSize: [2, 3],
+        fontSize: ['s', 'ms'],
         fontWeight: `medium`,
         color: `heading`,
       },
     },
     h1: {
-      fontSize: [6, 7, 8],
+      fontSize: ['ml', 'l', 'xl'],
       mt: 2,
       mb: 3,
       textShadow: `rgba(255, 255, 255, 0.15) 0px 5px 35px`,
@@ -90,26 +102,26 @@ const theme = merge(tailwind, {
       color: `heading`,
     },
     h2: {
-      fontSize: [4, 5, 6],
+      fontSize: ['m', 'ml', 'l'],
       mt: 2,
       mb: 2,
       color: `heading`,
     },
     h3: {
-      fontSize: [3, 4, 5],
+      fontSize: ['ms', 'm', 'ml'],
       mt: 3,
       color: `heading`,
     },
     h4: {
-      fontSize: [2, 3, 4],
+      fontSize: ['s', 'ms', 'm'],
       color: `heading`,
     },
     h5: {
-      fontSize: [1, 2, 3],
+      fontSize: ['xs', 's', 'ms'],
       color: `heading`,
     },
     h6: {
-      fontSize: 1,
+      fontSize: 'xs',
       mb: 2,
       color: `heading`,
     },
@@ -143,10 +155,19 @@ const theme = merge(tailwind, {
   texts: {
     bigger: {
       p: {
-        fontSize: [2, 3, 4],
+        fontSize: ['xs', 's', 'ms'],
       },
+      h1: {
+        fontSize: ['ml', 'l', 'xl'],
+      },
+      h2: {
+        fontSize: ['m', 'ml', 'l'],
+      }
     },
   },
+  // sizes:{
+  //   container:768,
+  // }
 })
 
 export default theme

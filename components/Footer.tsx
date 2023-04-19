@@ -40,16 +40,8 @@ const Footer = () => {
           </>)}
         {` `}
         <Link
-          aria-label="Link to the theme's GitHub repository"
+          aria-label="Link to this GitHub repository"
           sx={{ ml: 2 }}
-          href="*"
-        >
-          Theme
-        </Link>
-        <div sx={{ mx: 1 }}>by</div>
-        {` `}
-        <Link
-          aria-label="Link to the theme author's website"
           href="https://github.com/hitomi-t260g/my-app-with-typescript"
         >
           gitHub
