@@ -18,7 +18,7 @@ const Content = ({ speed, offset, children, className = ``, factor = 1 }: Conten
       flexDirection: `column`,
       alignItems: `center`,
       justifyContent: `center`,
-      // zIndex: 50,
+      zIndex: 50,
     }}
     speed={speed}
     offset={offset}

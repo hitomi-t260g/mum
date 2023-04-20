@@ -2,7 +2,7 @@
 
 import { hidden } from "../utils/utils"
 
-type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross"
+type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross" | "heart-regular"| "heart-solid" | "star-of-life-solid" | "heart-rough" | "snowflake"
 
 type SVGProps = {
   stroke?: boolean

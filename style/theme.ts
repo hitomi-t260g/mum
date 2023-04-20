@@ -15,7 +15,8 @@ const theme = merge(tailwind, {
   },
   // fontSizes: [`0.875rem`, `1rem`, `1.25rem`, `1.5rem`, `1.875rem`, `2.25rem`, `3rem`, `4rem`, `4.5rem`], //gatsby-plugin-theme-uiで指定しているフォントを足した
   fontSizes: {
-    _1xs: `1rem`, //1
+    xxs: `0.875rem`, //0
+    xs: `1rem`, //1
     s: `1.25rem`, //2
     ms: `1.5rem`, //3
     m: `1.875rem`, //4
@@ -36,12 +37,14 @@ const theme = merge(tailwind, {
     icon_darker: tailwind.colors.gray[6],
     icon_darkest: tailwind.colors.gray[7],
     icon_red: tailwind.colors.red[6],
-    icon_blue: tailwind.colors.blue[5],
-    icon_orange: tailwind.colors.orange[4],
+    icon_blue: tailwind.colors.blue[3],
+    icon_orange: tailwind.colors.orange[3],
     icon_yellow: tailwind.colors.yellow[5],
     icon_pink: tailwind.colors.pink[5],
+    icon_light_pink: tailwind.colors.pink[4],
+    icon_rose: tailwind.colors.rose[3],
     icon_purple: tailwind.colors.purple[6],
-    icon_green: tailwind.colors.green[5],
+    icon_green: tailwind.colors.lime[3],
     modes: {
       light: {
         text: tailwind.colors.gray[8],
