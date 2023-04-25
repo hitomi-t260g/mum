@@ -19,6 +19,7 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scroll": "^1.8.9",
     "theme-ui": "^0.15.7"
   },
   "devDependencies": {

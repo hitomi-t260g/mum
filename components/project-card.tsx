@@ -1,4 +1,7 @@
 /** @jsxImportSource theme-ui */
+// import {Link as Scroll} from 'react-scroll'
+
+import Link from "next/link"
 
 type ProjectCardProps = {
   link: string
@@ -8,29 +11,36 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
-  <a
-    href={link}
-    target="_blank"
+  <>
+
+  <Link
+    href={`/#${link}`}
     rel="noreferrer noopener"
     sx={{
       width: `100%`,
-      boxShadow: `lg`,
+      // boxShadow: `lg`,
       position: `relative`,
-      textDecoration: `none`,
+      // textDecoration: `none`,
       borderRadius: `lg`,
-      px: 4,
-      py: [4, 5],
+      px: 3,
+      py: [1, 2],
       color: `white`,
       background: bg || `none`,
-      transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
+      textAlign:`center`,
+      // borderBottom: `1px solid #FF8459`,
+      // borderImage: `linear-gradient(to right, #FFBFA9 0%, #FF8459 100%)`,
+      // borderImageSlice:1,
+      // transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
       "&:hover": {
-        color: `white !important`,
+        // color: `white !important`,
         transform: `translateY(-5px)`,
-        boxShadow: `xl`,
+        boxShadow: `lg`,
+        background:`linear-gradient(to right, #FFBFA9 0%, #FF8459 100%)`,
+        // border:`none`
       },
     }}
   >
-    <div
+    {/* <div
       sx={{
         opacity: 0.85,
         textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
@@ -42,20 +52,29 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       }}
     >
       {children}
-    </div>
+    </div> */}
     <div
       sx={{
         textTransform: `uppercase`,
         letterSpacing: `wide`,
-        pt: 4,
+        pt: 2,
+        pb: 2,
         fontSize: ['_1rem', 'ml'],
         fontWeight: `medium`,
         lineHeight: 1,
+        p: {
+          fontSize: 'm',
+          color: `white`,
+          margin: 0,
+          fontWeight: `bold`,
+        },
       }}
     >
       {title}
+      {children}
     </div>
-  </a>
+  </Link>
+  </>
 )
 
 export default ProjectCard

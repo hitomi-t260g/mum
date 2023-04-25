@@ -7,10 +7,11 @@ import Svg from "./svg"
 import { UpDown, UpDownWide } from "../style/animation"
 import ProjectsMDX from "../sections/projects.mdx"
 
-const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
+
+const Projects = ({ offset, factor }: { offset: number; factor?: number }) => (
   <div>
     <Divider
-      bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
+      bg="linear-gradient(to right, #FFBFA9 0%, #FFBFA9 100%)"
       sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)`, zIndex:'-1' }}
       speed={-0.2}
       offset={1.1}
@@ -23,7 +24,7 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
             display: `grid`,
             gridGap: [4, 4, 4, 5],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            h2: { gridColumn: `-1/1`, color: `white !important`, },
+            h2: { gridColumn: `-1/1`, color: `white !important`, textShadow: `3px 1px #FFBFA9`,},
           }}
         >
           <ProjectsMDX />
