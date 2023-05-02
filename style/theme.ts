@@ -159,7 +159,7 @@ const theme = merge(tailwind, {
   texts: {
     bigger: {
       p: {
-        fontSize: ['xs', 's', 'ms'],
+        fontSize: ['xxs', 'xs', 's'],
       },
       h1: {
         fontSize: ['ml', 'l', 'xl'],

@@ -3,14 +3,14 @@ import Inner from "../elements/Inner"
 import Content from "../elements/content"
 import Svg from "./Svg"
 import { UpDown, UpDownWide } from "../style/animation"
-import AboutMDX from "../sections/about.mdx"
+import StructuredMDX from "../sections/structured.mdx"
 
-const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     {/* 背景設定 */}
     <Divider
       bg="divider"
-      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+      clipPath="polygon(0 15%, 100% 25%, 100% 85%, 0 75%)"
       speed={0.2}
       offset={offset}
       factor={factor}
@@ -37,11 +37,11 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="about">
-        <AboutMDX />
+      <Inner id="structuredManner">
+        <StructuredMDX />
       </Inner>
     </Content>
   </div>
 )
 
-export default About
+export default StructuredManner

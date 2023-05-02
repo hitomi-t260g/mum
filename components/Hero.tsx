@@ -2,7 +2,7 @@
 import Divider from "../elements/divider"
 import Inner from "../elements/Inner"
 import Content from "../elements/content"
-import Svg from "./svg"
+import Svg from "./Svg"
 import { UpDown, UpDownWide } from "../style/animation"
 import Intro from "../sections/intro.mdx"
 
