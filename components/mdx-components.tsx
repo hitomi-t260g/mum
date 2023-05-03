@@ -7,6 +7,7 @@ const MdxComponents = {
       {children}
     </ProjectCard>
   ),
+
 }
 
 export default MdxComponents

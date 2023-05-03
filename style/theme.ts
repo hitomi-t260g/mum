@@ -33,6 +33,7 @@ const theme = merge(tailwind, {
     background: `#141821`,
     background_p: `#FFBFA9`,
     divider: tailwind.colors.gray[8],
+    divider_y: `#FBFFB1`,
     textMuted: tailwind.colors.gray[4],
     icon_brightest: tailwind.colors.white,
     icon_darker: tailwind.colors.gray[6],

@@ -9,7 +9,7 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
   <div>
     {/* 背景設定 */}
     <Divider
-      bg="divider"
+      bg="divider_y"
       clipPath="polygon(0 15%, 100% 25%, 100% 85%, 0 75%)"
       speed={0.2}
       offset={offset}
@@ -22,6 +22,7 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
         <Svg icon="heart-rough" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
         <Svg icon="heart-rough" width={8} stroke color="icon_darkest" left="25%" top="5%" />
         <Svg icon="heart-solid" hiddenMobile width={24} color="icon_rose" left="80%" top="80%" />
+
       </UpDown>
       <UpDownWide>
         <Svg icon="star-of-life-solid" hiddenMobile width={16} stroke color="icon_purple" left="5%" top="80%" />
@@ -38,8 +39,25 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
       <Inner id="structuredManner">
-        <StructuredMDX />
+      <div
+          sx={{
+            display: `grid`,
+            gridGap: [2, 2, 2, 3],
+            gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
+            h3: { gridColumn: `-1/1`,},
+          }}
+        >
+          <div sx={{gridColumn:"1"}}><StructuredMDX /></div>
+          <div sx={{
+            gridColumn: [`-2/2`],
+            mt:"5",
+            }}>
+              <img src="/static/mock.png" width="300" height="300" />
+          </div>
+        </div>
       </Inner>
+
+
     </Content>
   </div>
 )

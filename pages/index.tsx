@@ -21,10 +21,6 @@ const IndexPage = () => (
     {/* <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" color="white">
       <use id="box" xlinkHref="/static/icons.svg#box" />
     </svg> */}
-    {/* <h1>Hello Next.js 👋</h1>
-    <h1 sx={{
-        color: 'secondary',
-      }}>123</h1> */}
       <Hero offset={0} factor={1} />
       <Projects offset={1} factor={1.5} />
       <About offset={2.5} factor={2} />
