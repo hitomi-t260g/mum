@@ -130,6 +130,15 @@ const theme = merge(tailwind, {
       mb: 2,
       color: `heading`,
     },
+    ul:{
+      fontSize: ['xxs', 'xs', 's'],
+      listStyle:"none",
+      paddingLeft:"0",
+    },
+    li:{
+      listStyle:"none",
+      paddingLeft:"0",
+    },
   },
   layout: {
     container: {
@@ -170,8 +179,6 @@ const theme = merge(tailwind, {
       }
     },
   },
-  // sizes:{
-  //   container:768,
   // }
 })
 
