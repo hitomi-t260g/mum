@@ -38,7 +38,7 @@ const Thanks = ({ offset, factor = 1 }: { offset: number; factor?: number }) => 
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="task">
+      <Inner id="thanks">
 
       <div
           sx={{
