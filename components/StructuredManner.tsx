@@ -44,7 +44,7 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
             display: `grid`,
             gridGap: [2, 2, 2, 3],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            h3: { gridColumn: `-1/1`,},
+            h3: { gridColumn: `-1/1`, fontSize: ['s', 'ms', 'm']},
           }}
         >
           <div sx={{gridColumn:"1"}}><StructuredMDX /></div>

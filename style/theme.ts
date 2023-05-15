@@ -83,7 +83,7 @@ const theme = merge(tailwind, {
       },
     },
     p: {
-      fontSize: ['xs', 's'],
+      fontSize: ['xxs', 'xs', 's'],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,

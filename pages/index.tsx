@@ -13,6 +13,8 @@ import Projects from '../components/Projects'
 import Contact from '../components/contact'
 import StructuredManner from '../components/StructuredManner'
 import Task from '../components/Task'
+import Study from '../components/Study'
+import Thanks from '../components/Thanks'
 
 const IndexPage = () => (
 <ThemeProvider theme={theme}>
@@ -24,10 +26,11 @@ const IndexPage = () => (
     </svg> */}
       <Hero offset={0} factor={1} />
       <Projects offset={1} factor={1.5} />
-      <About offset={2.5} factor={2} />
-      <StructuredManner offset={4.5} factor={2} />
-      <Task offset={6.5} factor={1.5} />
-      <About offset={8.0} factor={2} />
+      <About offset={2.5} factor={1.5} />
+      <StructuredManner offset={4.0} factor={1.5} />
+      <Task offset={5.5} factor={1.5} />
+      <Study offset={7.0} factor={1.5} />
+      <Thanks offset={8.5} factor={1.5} />
       <Contact offset={10.0} factor={1} />
     </Parallax>
   </Layout>
