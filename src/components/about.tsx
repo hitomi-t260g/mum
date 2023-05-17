@@ -1,15 +1,15 @@
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
-import ThanksMDX from "../sections/thanks.mdx"
+import { UpDown, UpDownWide } from "style/animation"
+import AboutMDX from "../sections/about.mdx"
 
-const Thanks = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     {/* 背景設定 */}
     <Divider
-      bg="background_p"
+      bg="divider"
       clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
       speed={0.2}
       offset={offset}
@@ -22,7 +22,6 @@ const Thanks = ({ offset, factor = 1 }: { offset: number; factor?: number }) => 
         <Svg icon="heart-rough" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
         <Svg icon="heart-rough" width={8} stroke color="icon_darkest" left="25%" top="5%" />
         <Svg icon="heart-solid" hiddenMobile width={24} color="icon_rose" left="80%" top="80%" />
-
       </UpDown>
       <UpDownWide>
         <Svg icon="star-of-life-solid" hiddenMobile width={16} stroke color="icon_purple" left="5%" top="80%" />
@@ -38,35 +37,11 @@ const Thanks = ({ offset, factor = 1 }: { offset: number; factor?: number }) => 
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="thanks">
-
-      <div
-          sx={{
-            display: `grid`,
-            gridGap: [2, 2, 2, 3],
-            gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            // h3: { gridColumn: `-1/1`,},
-            gridColumn: [`-2/2`],
-          }}
-        >
-          <div sx={{
-            // gridColumn: [`-1/1`],
-            mt:"5",
-            display: "block",
-            margin:"auto",
-            padding:"1em",
-            }}>
-              <img src="/static/thanks.png" width="300" height="300" />
-          </div>
-          <div sx={{gridColumn:"-2/2", h3:{ fontSize: ['s', 'ms', 'm']}}}>
-            <ThanksMDX />
-          </div>
-        </div>
+      <Inner id="about">
+        <AboutMDX />
       </Inner>
-
-
     </Content>
   </div>
 )
 
-export default Thanks
+export default About

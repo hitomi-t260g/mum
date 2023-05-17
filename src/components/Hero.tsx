@@ -1,9 +1,9 @@
 /** @jsxImportSource theme-ui */
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
+import { UpDown, UpDownWide } from "style/animation"
 import Intro from "../sections/intro.mdx"
 
 const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (

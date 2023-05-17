@@ -1,16 +1,16 @@
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
-import TaskMDX from "../sections/task.mdx"
+import { UpDown, UpDownWide } from "style/animation"
+import StructuredMDX from "../sections/structured.mdx"
 
-const Task = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     {/* 背景設定 */}
     <Divider
-      bg="background_p"
-      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+      bg="divider_y"
+      clipPath="polygon(0 15%, 100% 25%, 100% 85%, 0 75%)"
       speed={0.2}
       offset={offset}
       factor={factor}
@@ -38,36 +38,23 @@ const Task = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="task">
-
+      <Inner id="structuredManner">
       <div
           sx={{
             display: `grid`,
             gridGap: [2, 2, 2, 3],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            // h3: { gridColumn: `-1/1`,},
-            gridColumn: [`-2/2`],
+            h3: { gridColumn: `-1/1`, fontSize: ['s', 'ms', 'm']},
           }}
         >
+          <div sx={{gridColumn:"1"}}><StructuredMDX /></div>
           <div sx={{
-            // gridColumn: [`-1/1`],
+            gridColumn: [`-2/2`],
             mt:"5",
             display: "block",
-            margin:"auto",
-            padding:"1em",
+            margin:"auto"
             }}>
-              <img src="/static/schedule.png" width="300" height="300" />
-              <p style={{fontSize:"xs", fontWeight:"bold"}}>カレンダーの凡例</p>
-              <ul style={{
-                listStyle:"none",
-                paddingLeft:"0",}}>
-                <li>紫：当日必須、移動不可のタスク</li>
-                <li>黄色：移動可能</li>
-                <li>青：個人作業でなく移動不可の予定</li>
-              </ul>
-          </div>
-          <div sx={{gridColumn:"-2/2", h3:{ fontSize: ['s', 'ms', 'm']}}}>
-            <TaskMDX />
+              <img src="/static/mock.png" width="300" height="300" />
           </div>
         </div>
       </Inner>
@@ -77,4 +64,4 @@ const Task = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   </div>
 )
 
-export default Task
+export default StructuredManner

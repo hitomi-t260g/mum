@@ -1,16 +1,16 @@
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
-import StructuredMDX from "../sections/structured.mdx"
+import { UpDown, UpDownWide } from "style/animation"
+import ThanksMDX from "../sections/thanks.mdx"
 
-const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Thanks = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     {/* 背景設定 */}
     <Divider
-      bg="divider_y"
-      clipPath="polygon(0 15%, 100% 25%, 100% 85%, 0 75%)"
+      bg="background_p"
+      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
       speed={0.2}
       offset={offset}
       factor={factor}
@@ -38,23 +38,28 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="structuredManner">
+      <Inner id="thanks">
+
       <div
           sx={{
             display: `grid`,
             gridGap: [2, 2, 2, 3],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            h3: { gridColumn: `-1/1`, fontSize: ['s', 'ms', 'm']},
+            // h3: { gridColumn: `-1/1`,},
+            gridColumn: [`-2/2`],
           }}
         >
-          <div sx={{gridColumn:"1"}}><StructuredMDX /></div>
           <div sx={{
-            gridColumn: [`-2/2`],
+            // gridColumn: [`-1/1`],
             mt:"5",
             display: "block",
-            margin:"auto"
+            margin:"auto",
+            padding:"1em",
             }}>
-              <img src="/static/mock.png" width="300" height="300" />
+              <img src="/static/thanks.png" width="300" height="300" />
+          </div>
+          <div sx={{gridColumn:"-2/2", h3:{ fontSize: ['s', 'ms', 'm']}}}>
+            <ThanksMDX />
           </div>
         </div>
       </Inner>
@@ -64,4 +69,4 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
   </div>
 )
 
-export default StructuredManner
+export default Thanks

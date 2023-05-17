@@ -1,16 +1,16 @@
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
-import AboutMDX from "../sections/about.mdx"
+import { UpDown, UpDownWide } from "style/animation"
+import StudyMDX from "../sections/study.mdx"
 
-const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Study = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     {/* 背景設定 */}
     <Divider
-      bg="divider"
-      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+      bg="divider_y"
+      clipPath="polygon(0 15%, 100% 25%, 100% 85%, 0 75%)"
       speed={0.2}
       offset={offset}
       factor={factor}
@@ -22,6 +22,7 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         <Svg icon="heart-rough" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
         <Svg icon="heart-rough" width={8} stroke color="icon_darkest" left="25%" top="5%" />
         <Svg icon="heart-solid" hiddenMobile width={24} color="icon_rose" left="80%" top="80%" />
+
       </UpDown>
       <UpDownWide>
         <Svg icon="star-of-life-solid" hiddenMobile width={16} stroke color="icon_purple" left="5%" top="80%" />
@@ -37,11 +38,30 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     </Divider>
     {/* コンテンツ */}
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner id="about">
-        <AboutMDX />
+      <Inner id="study">
+      <div
+          sx={{
+            display: `grid`,
+            gridGap: [2, 2, 2, 3],
+            gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
+            h3: { gridColumn: `-1/1`, fontSize: ['s', 'ms', 'm']},
+          }}
+        >
+          <div sx={{gridColumn:"1"}}><StudyMDX /></div>
+          <div sx={{
+            gridColumn: [`-2/2`],
+            mt:"5",
+            display: "block",
+            margin:"auto"
+            }}>
+              <img src="/static/clock.png" width="350" height="350" />
+          </div>
+        </div>
       </Inner>
+
+
     </Content>
   </div>
 )
 
-export default About
+export default Study

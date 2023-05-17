@@ -1,10 +1,10 @@
 /** @jsxImportSource theme-ui */
 
-import Divider from "../elements/divider"
-import Inner from "../elements/Inner"
-import Content from "../elements/content"
+import Divider from "elements/divider"
+import Inner from "elements/Inner"
+import Content from "elements/content"
 import Svg from "./Svg"
-import { UpDown, UpDownWide } from "../style/animation"
+import { UpDown, UpDownWide } from "style/animation"
 import ProjectsMDX from "../sections/projects.mdx"
 
 
