@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Box, Flex, Link, useColorMode, jsx } from "theme-ui"
+import GitHub from "../../static/github.svg"
 
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode<"light" | "dark">()
@@ -33,10 +34,10 @@ const Footer = () => {
       >
         {isDark ? (
           <>
-          <p>ダークモード</p>
+          <p>now Dark</p>
           </>) : (
             <>
-            <p>ライトモード</p>
+            <p>now Light</p>
           </>)}
         {` `}
         <Link
@@ -44,7 +45,10 @@ const Footer = () => {
           sx={{ ml: 2 }}
           href="https://github.com/hitomi-t260g/my-app-with-typescript"
         >
-          gitHub
+          <GitHub
+          width={50}
+          height={50}
+          style={{ display: "block"}}/>
         </Link>
       </Flex>
     </Box>
