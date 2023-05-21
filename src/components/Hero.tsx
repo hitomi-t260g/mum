@@ -4,7 +4,7 @@ import Inner from "elements/Inner"
 import Content from "elements/content"
 import Svg from "./Svg"
 import { UpDown, UpDownWide } from "style/animation"
-import Intro from "../sections/intro.mdx"
+import IntroMdx from "../sections/intro.mdx"
 
 const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
@@ -40,7 +40,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
 
       <Inner>
 
-        <Intro/>
+        <IntroMdx/>
 
       </Inner>
     </Content>
