@@ -21,7 +21,22 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+        },
+      ],
+    });
+    return config;
+  },
+  images: {
+    disableStaticImages: true, // importした画像の型定義設定を無効にする
+  },
 }
 
 // Merge MDX config with Next.js config
 module.exports = withMDX(nextConfig)
+
