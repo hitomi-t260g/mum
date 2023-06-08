@@ -59,6 +59,7 @@ const theme = merge(tailwind, {
         icon_darker: tailwind.colors.gray[4],
         icon_darkest: tailwind.colors.gray[6],
         divider_y: `#FBFFB1`,
+        background_p: `#FFBFA9`,
       },
     },
   },
