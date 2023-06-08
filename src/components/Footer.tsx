@@ -32,24 +32,9 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
-        {isDark ? (
-          <>
-          <p>now Dark</p>
-          </>) : (
-            <>
-            <p>now Light</p>
-          </>)}
+
         {` `}
-        <Link
-          aria-label="Link to this GitHub repository"
-          sx={{ ml: 2 }}
-          href="https://github.com/hitomi-t260g/my-app-with-typescript"
-        >
-          <GitHub
-          width={50}
-          height={50}
-          style={{ display: "block"}}/>
-        </Link>
+
       </Flex>
     </Box>
   )
