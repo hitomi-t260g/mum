@@ -31,9 +31,9 @@ const theme = merge(tailwind, {
     text: tailwind.colors.gray[3],
     heading: tailwind.colors.white,
     background: `#141821`,
-    background_p: `#FFBFA9`,
+    background_p: `#A18176`,
     divider: tailwind.colors.gray[8],
-    divider_y: `#FBFFB1`,
+    divider_y: `#70733C`,
     textMuted: tailwind.colors.gray[4],
     icon_brightest: tailwind.colors.white,
     icon_darker: tailwind.colors.gray[6],
@@ -58,6 +58,8 @@ const theme = merge(tailwind, {
         icon_brightest: tailwind.colors.gray[2],
         icon_darker: tailwind.colors.gray[4],
         icon_darkest: tailwind.colors.gray[6],
+        divider_y: `#FBFFB1`,
+        background_p: `#FFBFA9`,
       },
     },
   },
@@ -147,6 +149,7 @@ const theme = merge(tailwind, {
   },
   buttons: {
     toggle: {
+      fontSize: ['xxs', 'xs', 'xs'],
       color: `background`,
       border: `none`,
       backgroundColor: `text`,

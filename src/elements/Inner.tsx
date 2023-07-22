@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */
+
 
 type InnerProps = {
   className?: string

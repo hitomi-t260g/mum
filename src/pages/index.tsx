@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */
+
 
 import { Parallax } from '@react-spring/parallax'
 import Layout from 'components/Layout'

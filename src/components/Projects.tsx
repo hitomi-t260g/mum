@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */
+
 
 import Divider from "elements/divider"
 import Inner from "elements/Inner"
