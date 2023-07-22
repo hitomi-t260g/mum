@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */
+
 
 import { hidden } from "../utils/utils"
 

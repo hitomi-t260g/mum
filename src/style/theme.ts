@@ -31,10 +31,10 @@ const theme = merge(tailwind, {
     text: tailwind.colors.white,
     heading: tailwind.colors.white,
     background: `#141821`,
-    background_p: `#EBAD98`,
+    background_p: `#A18176`,
     divider: tailwind.colors.gray[8],
-    divider_y: `#FBFFB1`,
-    textMuted: tailwind.colors.gray[5],
+    divider_y: `#70733C`,
+    textMuted: tailwind.colors.gray[4],
     icon_brightest: tailwind.colors.white,
     icon_darker: tailwind.colors.gray[6],
     icon_darkest: tailwind.colors.gray[7],
@@ -149,6 +149,7 @@ const theme = merge(tailwind, {
   },
   buttons: {
     toggle: {
+      fontSize: ['xxs', 'xs', 'xs'],
       color: `background`,
       border: `none`,
       backgroundColor: `text`,

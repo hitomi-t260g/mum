@@ -1,12 +1,16 @@
-/** @jsxImportSource theme-ui */
+
 import Divider from "elements/divider"
 import Inner from "elements/Inner"
 import Content from "elements/content"
 import Svg from "./Svg"
 import { UpDown, UpDownWide } from "style/animation"
-import Intro from "../sections/intro.mdx"
+import IntroMdx from "../sections/intro.mdx"
+import { Button, useColorMode } from "theme-ui"
 
-const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
+  const [colorMode, setColorMode] = useColorMode<"light" | "dark">()
+  const isDark = colorMode === `dark`
+  return(
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
@@ -36,15 +40,28 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Svg icon="heart-rough" width={16} stroke color="icon_darker" left="10%" top="50%" />
       <Svg icon="heart-rough" width={8} stroke color="icon_darker" left="80%" top="70%" />
     </Divider>
+
     <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor}>
 
       <Inner>
 
-        <Intro/>
-
+        <IntroMdx/>
+        <Button
+        sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: `auto`, my: 4, fontSizes:`xxs` }}
+        onClick={() => {
+          const next = isDark ? `light` : `dark`
+          setColorMode(next)
+        }}
+        type="button"
+        data-testid="color-mode-toggle"
+        aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
+      >
+        {isDark ? `Change to light mode` : `Change to dark mode`}
+      </Button>
       </Inner>
     </Content>
   </div>
-)
+  )
+      }
 
 export default Hero
