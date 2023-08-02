@@ -25,6 +25,7 @@ const Projects = ({ offset, factor }: { offset: number; factor?: number }) => (
             gridGap: [4, 4, 4, 5],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
             h2: { gridColumn: `-1/1`, color: `white !important`, textShadow: `3px 1px #FFBFA9`,},
+
           }}
         >
           <ProjectsMDX />

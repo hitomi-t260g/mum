@@ -47,7 +47,7 @@ const StructuredManner = ({ offset, factor = 1 }: { offset: number; factor?: num
             h3: { gridColumn: `-1/1`, fontSize: ['s', 'ms', 'm']},
           }}
         >
-          <div sx={{color:"textMuted", gridColumn:"1"}}><StructuredMDX /></div>
+          <div sx={{color:"text", gridColumn:"1"}}><StructuredMDX /></div>
           <div sx={{
             gridColumn: [`-2/2`],
             mt:"5",
