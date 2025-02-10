@@ -1,13 +1,42 @@
-
-
 import { hidden } from "../utils/utils"
 
-type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross" | "heart-regular"| "heart-solid" | "star-of-life-solid" | "heart-rough" | "snowflake"
+type IconType =
+  | "triangle"
+  | "circle"
+  | "arrowUp"
+  | "upDown"
+  | "box"
+  | "hexa"
+  | "cross"
+  | "heart-regular"
+  | "heart-solid"
+  | "star-of-life-solid"
+  | "heart-rough"
+  | "snowflake"
 
 type SVGProps = {
   stroke?: boolean
   color?: string | number | any
-  width: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 64 | string
+  width:
+    | 0
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 8
+    | 10
+    | 12
+    | 16
+    | 20
+    | 24
+    | 32
+    | 40
+    | 48
+    | 56
+    | 64
+    | string
   icon: IconType
   left: string
   top: string
@@ -24,8 +53,14 @@ const viewBox = {
   cross: `0 0 100 100`,
 }
 
-const Svg = ({ stroke = false, color = ``, width, icon, left, top,
-hiddenMobile = false
+const Svg = ({
+  stroke = false,
+  color = ``,
+  width,
+  icon,
+  left,
+  top,
+  hiddenMobile = false,
 }: SVGProps) => (
   <svg
     sx={{
@@ -41,7 +76,7 @@ hiddenMobile = false
     viewBox={viewBox[icon]}
     role="img"
   >
-    <use href={(`/static/icons.svg#${icon}`)} />
+    <use href={`/static/icons.svg#${icon}`} />
   </svg>
 )
 

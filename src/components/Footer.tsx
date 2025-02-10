@@ -1,13 +1,8 @@
-
-import { Box, Flex, Link, useColorMode, jsx } from "theme-ui"
-import GitHub from "../../static/github.svg"
+import { Box, Flex } from "theme-ui"
 
 const Footer = () => {
-
-
   return (
     <Box as="footer" variant="footer">
-
       Copyright &copy; {new Date().getFullYear()}. All rights reserved.
       <br />
       <Flex
@@ -20,9 +15,7 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
-
         {` `}
-
       </Flex>
     </Box>
   )
