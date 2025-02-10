@@ -1,6 +1,3 @@
-
-// import {Link as Scroll} from 'react-scroll'
-
 import Link from "next/link"
 
 type ProjectCardProps = {

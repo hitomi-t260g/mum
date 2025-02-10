@@ -50,7 +50,6 @@ const Task = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           }}
         >
           <div sx={{
-            // gridColumn: [`-1/1`],
             mt:"5",
             display: "block",
             margin:"auto",
